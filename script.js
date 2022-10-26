@@ -10,6 +10,7 @@ if (edad >= 18) {
 }
 
 
+
 let opcionBebida = Number(prompt("Seleccione una opcion ingresando el numero pertinente: 1) Gin 2) Fernet 3)Cerveza 4) Salir "));
 
 
@@ -29,4 +30,10 @@ let opcionBebida = Number(prompt("Seleccione una opcion ingresando el numero per
         default:
             alert('Opcion no valida')
             break;
-    }
+}
+    
+function saludar(nombre) {
+    console.log("hola " + nombre);
+}
+
+saludar("hela");
