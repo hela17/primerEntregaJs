@@ -64,3 +64,62 @@ function porCadaUno(arr, fn) {
 const numeros = [1, 2, 3, 4];
 
 porCadaUno(numeros, console.log)
+
+
+
+// OBJETOS
+
+const ginBosque500cc = {
+    marca: "Bosque",
+    stock: 500,
+    precio: 2500
+}
+
+const ginBulldog700ml = {
+    marca: "Bulldog",
+    stock: 700,
+    precio: 6500
+}
+// console.log(ginBulldog700ml);
+
+// FUNCION CONSTRUCTOR
+
+// function Producto(marca, graduacion, estilo, volumen, precio)
+
+
+//******* METODOS ********** */
+class Producto {
+    constructor(id, nombre, stock, precio) {
+
+        this.id = id;
+        this.nombre = nombre;
+        this.stock = stock;
+        this.precio = precio;
+
+        // this.descontar = function() { this.stock = this.stock - 1 };
+    }
+}
+
+// ginBosque500cc.descontar();
+// console.log(Producto.stock);
+
+const producto1 = new Producto(1, "Bosque", 50, 2500);
+const producto2 = new Producto(2, "Bulldog", 100, 6300);
+const producto3 = new Producto(3, "Fernet Branca", 25, 2000);
+const producto4 = new Producto(4, "Aperol", 75, 2500);
+    
+const productos = [producto1, producto2, producto3, producto4];
+
+// console.log(productos);
+    
+productos.forEach((productos) => {
+    console.log(productos.stock);
+});
+
+const preciosActualizados = productos.map((producto) => {
+    return {
+        nombre: producto.nombre,
+        precio: producto.precio * 1.1
+    }
+});
+console.log(productos); console.log(preciosActualizados);
