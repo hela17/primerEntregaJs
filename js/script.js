@@ -32,11 +32,24 @@
 //             break;
 // }
     
+let nombre = prompt('Hola! ¿Como te llamas?');
+let edad = prompt("Cuantos años tenes?");
+
 function saludar(nombre) {
-    console.log("hola " + nombre);
+    alert("hola " + nombre);
 }
 
-saludar("hela");
+function autorizacion(edad) {
+    if (edad < 18){
+        alert("Recordá que no podemos venderte bebidas acoholicas");
+    }
+    else {
+        alert("Bienvenido " + nombre);
+    }
+}
+
+// saludar(nombre);
+autorizacion(edad);
 
 function asignarOperacion(op) {
     if (op == "sumar") {
